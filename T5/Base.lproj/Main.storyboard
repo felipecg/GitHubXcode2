@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gb5-va-fvJ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="MZ1-NL-asg">
+            <objects>
+                <navigationController id="gb5-va-fvJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Q4-AM-WaI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="69b-sM-L0B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgL-9h-K3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1764" y="-219"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="vistaLogin" automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="LoginViewController" customModule="T5" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wmV-VY-kJc"/>
+                        <viewControllerLayoutGuide type="bottom" id="4D6-Lh-6vy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uX2-Ea-oUz">
+                                <rect key="frame" x="65" y="339" width="188" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Acceder">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAcceder:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cAM-Fu-AwQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qau-ZT-pdf">
+                                <rect key="frame" x="66" y="233" width="188" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4j-SB-e1W">
+                                <rect key="frame" x="66" y="264" width="188" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUz-3D-Mjh">
+                                <rect key="frame" x="105" y="388" width="109" height="30"/>
+                                <state key="normal" title="Limpiar Pantalla"/>
+                                <connections>
+                                    <action selector="btnLimpiar:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yG0-n9-eZG"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-STC.png" translatesAutoresizingMaskIntoConstraints="NO" id="VHm-Dk-obs">
+                                <rect key="frame" x="97" y="157" width="124" height="50"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qau-ZT-pdf" firstAttribute="leading" secondItem="E4j-SB-e1W" secondAttribute="leading" id="3Yp-dM-ca9"/>
+                            <constraint firstItem="qau-ZT-pdf" firstAttribute="top" secondItem="wmV-VY-kJc" secondAttribute="bottom" constant="169" id="AQd-6h-SiC"/>
+                            <constraint firstItem="VHm-Dk-obs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="81" id="AmZ-QG-T9h"/>
+                            <constraint firstItem="E4j-SB-e1W" firstAttribute="top" secondItem="qau-ZT-pdf" secondAttribute="bottom" constant="1" id="GDA-oL-R9k"/>
+                            <constraint firstItem="VHm-Dk-obs" firstAttribute="centerX" secondItem="uX2-Ea-oUz" secondAttribute="centerX" id="OXq-IF-nnl"/>
+                            <constraint firstItem="qau-ZT-pdf" firstAttribute="trailing" secondItem="E4j-SB-e1W" secondAttribute="trailing" id="PjV-gL-tGs"/>
+                            <constraint firstItem="qau-ZT-pdf" firstAttribute="top" secondItem="VHm-Dk-obs" secondAttribute="bottom" constant="26" id="QeF-1P-aDJ"/>
+                            <constraint firstItem="qau-ZT-pdf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="UkE-Qs-PX1"/>
+                            <constraint firstItem="uX2-Ea-oUz" firstAttribute="top" secondItem="E4j-SB-e1W" secondAttribute="bottom" constant="45" id="ac7-m7-7De"/>
+                            <constraint firstItem="uX2-Ea-oUz" firstAttribute="centerX" secondItem="jUz-3D-Mjh" secondAttribute="centerX" id="d9N-Em-VLe"/>
+                            <constraint firstItem="jUz-3D-Mjh" firstAttribute="top" secondItem="uX2-Ea-oUz" secondAttribute="bottom" constant="19" id="dVL-sl-y9T"/>
+                            <constraint firstItem="qau-ZT-pdf" firstAttribute="centerX" secondItem="jUz-3D-Mjh" secondAttribute="centerX" id="jzM-hX-fAv"/>
+                            <constraint firstItem="qau-ZT-pdf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="naw-df-PGp"/>
+                            <constraint firstItem="uX2-Ea-oUz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="49" id="wSV-c4-S3i"/>
+                            <constraint firstItem="VHm-Dk-obs" firstAttribute="top" secondItem="wmV-VY-kJc" secondAttribute="bottom" constant="93" id="xiN-m2-5nt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SA3-BC-nST"/>
+                    <connections>
+                        <outlet property="txtPassword" destination="E4j-SB-e1W" id="fiL-Jy-YVd"/>
+                        <outlet property="txtUsuario" destination="qau-ZT-pdf" id="Z4V-x5-akH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1752" y="744"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0eJ-ep-fIo">
+            <objects>
+                <navigationController id="WA2-8w-BJh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SBF-Z3-6aP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WHn-2u-Eqp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="V4f-kn-CuI" kind="modal" id="Awu-DN-Mg6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jS0-NU-VyZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1383" y="943"/>
+        </scene>
+        <!--Tabla Usuario Controller-->
+        <scene sceneID="7Qz-Ks-EO7">
+            <objects>
+                <tableViewController storyboardIdentifier="lista" id="V4f-kn-CuI" customClass="TablaUsuarioController" customModule="T5" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="XQr-N4-20C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="TnP-60-nhc">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Usuario" id="MEr-YA-ebH">
+                                    <barButtonItem key="leftBarButtonItem" title="Volver" id="oC1-sV-efx">
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="modal" id="m8k-K9-9R9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" title="Ordenar" id="1CA-q0-mGy">
+                                        <connections>
+                                            <action selector="btnOrdenar:" destination="V4f-kn-CuI" id="qJp-yQ-W2G"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Lu" textLabel="lfu-pl-NBS" style="IBUITableViewCellStyleDefault" id="i0r-0y-3RF">
+                                <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i0r-0y-3RF" id="Zrc-jS-uFn">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lfu-pl-NBS">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="V4f-kn-CuI" id="bqe-xi-RfC"/>
+                            <outlet property="delegate" destination="V4f-kn-CuI" id="soV-PZ-CcI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="N7o-1b-g2S"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y4h-ef-p6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1057" y="721"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo-STC.png" width="117" height="29"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="m8k-K9-9R9"/>
+    </inferredMetricsTieBreakers>
+</document>
